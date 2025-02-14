@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Mikufy",
+  "version": "1.0",
+  "description": "Transform Google Search and YouTube thumbnails to Miku.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": [
+    "https://www.google.com/*",
+    "https://www.youtube.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/search*"],
+      "js": ["script.js"],
+      "css": ["style.css"]
+    },
+    {
+      "matches": ["https://www.youtube.com/*"],
+      "js": ["script.js"]
+    }
+  ]
+}
